@@ -76,12 +76,12 @@ public class FoodControllerTest {
 		//of the json
 	}
 	
-	@Test
-	public void testGetFoodByNameSuccess() throws Exception {
-		when(this.fServ.getFoodByName(food.getFoodName())).thenReturn(food);
-		this.mock.perform(get("/food/"+food.getFoodName()).contentType(MediaType.APPLICATION_JSON))
-		.andExpect(status().isOk()).andExpect(jsonPath("$.foodName", is(food.getFoodName())));
-	}
+//	@Test
+//	public void testGetFoodByNameSuccess() throws Exception {
+//		when(this.fServ.getFoodByName(food.getFoodName())).thenReturn(food);
+//		this.mock.perform(get("/food/"+food.getFoodName()).contentType(MediaType.APPLICATION_JSON))
+//		.andExpect(status().isOk()).andExpect(jsonPath("$.foodName", is(food.getFoodName())));
+//	}
 	
 	@Test
 	public void testputNotAllowed() throws Exception {
