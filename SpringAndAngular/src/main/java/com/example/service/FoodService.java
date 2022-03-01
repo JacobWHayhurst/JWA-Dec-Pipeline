@@ -53,5 +53,9 @@ public class FoodService {
 		fRepo.delete(food);
 	}
 	
+	public Food test(String name) {
+		return this.fRepo.getFoodByFoodName(name);
+	}
+	
 
 }

@@ -12,6 +12,7 @@ import com.example.model.Food;
 public interface FoodRepository extends JpaRepository<Food, Integer> {
 	
 	public List<Food> findAll();
+	public Food getFoodByFoodName(String name);
 	public Food findByFoodName(String foodName);
 	public List<Food> findByCalories(int cal);
 	public Food findByFoodNameAndCalories(String foodName, int cal);

@@ -57,7 +57,7 @@ public class FoodController {
 	
 	@GetMapping("/{foodname}")
 	public ResponseEntity<Food> getFoodName(@PathVariable("foodname") String name){
-		Optional<Food> foodOpt = Optional.ofNullable(fServ.getFoodByName(name));
+		Optional<Food> foodOpt = Optional.ofNullable(fServ.test(name));
 		if(foodOpt.isPresent()) {
 			return ResponseEntity.status(200).body(foodOpt.get());
 		}
@@ -84,6 +84,11 @@ public class FoodController {
 		}
 		fServ.insertFood(food);
 		return ResponseEntity.status(201).body(fServ.getFoodByName(food.getFoodName()));
+	}
+	
+	@PostMapping(value="/testing")
+	public ResponseEntity<String>test(){
+		return ResponseEntity.status(200).body("success");
 	}
 	
 	

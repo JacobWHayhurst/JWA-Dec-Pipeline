@@ -1,6 +1,7 @@
 package com.example.gluecode;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -112,6 +113,7 @@ public class FoodTableTest {
 		WebDriverWait wait = new WebDriverWait(FoodUtilityDriver.driver, 5);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("foodExists")));
 		assertEquals("FOOD ALREADY EXISTS", FoodUtilityDriver.driver.findElement(By.id("foodExists")).getText());
+		
 	}
 
 }
