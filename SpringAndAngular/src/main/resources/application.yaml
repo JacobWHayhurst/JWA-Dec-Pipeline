@@ -1,0 +1,16 @@
+server:
+  port: 9015
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://jwa-2112-dec.c7otdgsixoyh.us-east-2.rds.amazonaws.com:5432/fooddb
+    username: fooduser
+    password: P4ssw0rd
+    driver-class-name: org.postgresql.Driver 
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true 
+    hibernate:
+      ddl-auto: update
+
